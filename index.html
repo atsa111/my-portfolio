@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ацамаз Чочиев | Математика & Код</title>
-
+    
     <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
     <!-- Иконки -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
         :root {
             --bg: #f8f9fa;
@@ -52,10 +49,7 @@
             padding: 0 20px;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        a { text-decoration: none; color: inherit; }
 
         /* --- НАВИГАЦИЯ --- */
         header {
@@ -71,10 +65,8 @@
             letter-spacing: -0.5px;
             color: var(--primary);
         }
-
-        .logo span {
-            color: var(--accent);
-        }
+        
+        .logo span { color: var(--accent); }
 
         nav ul {
             display: flex;
@@ -89,9 +81,7 @@
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: var(--accent);
-        }
+        nav a:hover { color: var(--accent); }
 
         /* --- ГЛАВНЫЙ ЭКРАН --- */
         .hero {
@@ -102,9 +92,7 @@
             gap: 40px;
         }
 
-        .hero-text {
-            flex: 1;
-        }
+        .hero-text { flex: 1; }
 
         .hero-tag {
             display: inline-block;
@@ -136,7 +124,6 @@
             color: var(--primary);
             font-weight: 600;
         }
-
         .hero p .highlight {
             color: var(--accent);
             font-weight: 600;
@@ -156,6 +143,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            cursor: pointer;
         }
 
         .btn-primary {
@@ -183,7 +171,6 @@
         .hero-visual {
             flex: 0 0 350px;
             height: 400px;
-            /* Увеличил высоту, чтобы фото было крупнее */
             background: var(--surface);
             border-radius: 20px;
             border: 1px solid var(--border);
@@ -192,7 +179,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
         }
 
         /* Само фото */
@@ -201,12 +188,11 @@
             height: 100%;
             object-fit: cover;
             object-position: top center;
-            /* Фокусируемся на лице */
             position: relative;
             z-index: 1;
         }
 
-        /* Затемнение снизу, чтобы картинка сливалась с фоном */
+        /* Затемнение снизу */
         .hero-visual::after {
             content: '';
             position: absolute;
@@ -219,7 +205,7 @@
             pointer-events: none;
         }
 
-        /* Фоновые символы (поверх фото) */
+        /* Фоновые символы */
         .hero-visual .math-bg {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.2rem;
@@ -247,17 +233,9 @@
         }
 
         @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
 
         /* --- СЕКЦИИ --- */
@@ -329,7 +307,7 @@
             background: var(--code-bg);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border: 1px solid #313244;
         }
 
@@ -341,23 +319,10 @@
             gap: 8px;
         }
 
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-
-        .dot.red {
-            background: #f38ba8;
-        }
-
-        .dot.yellow {
-            background: #f9e2af;
-        }
-
-        .dot.green {
-            background: #a6e3a1;
-        }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot.red { background: #f38ba8; }
+        .dot.yellow { background: #f9e2af; }
+        .dot.green { background: #a6e3a1; }
 
         .terminal-title {
             color: #6c7086;
@@ -375,22 +340,10 @@
             line-height: 1.8;
         }
 
-        .terminal-body .key {
-            color: #89b4fa;
-        }
-
-        .terminal-body .string {
-            color: #a6e3a1;
-        }
-
-        .terminal-body .comment {
-            color: #6c7086;
-            font-style: italic;
-        }
-
-        .terminal-body .bracket {
-            color: #f9e2af;
-        }
+        .terminal-body .key { color: #89b4fa; }
+        .terminal-body .string { color: #a6e3a1; }
+        .terminal-body .comment { color: #6c7086; font-style: italic; }
+        .terminal-body .bracket { color: #f9e2af; }
 
         /* --- ПРОЕКТЫ --- */
         .projects-section {
@@ -416,7 +369,7 @@
 
         .project-card:hover {
             border-color: var(--accent);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .project-card h3 {
@@ -448,6 +401,21 @@
             font-weight: 500;
         }
 
+        .project-card-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: opacity 0.3s;
+            cursor: pointer;
+        }
+
+        .project-card-link:hover {
+            opacity: 0.8;
+        }
+
         /* --- КОНТАКТЫ --- */
         .contacts-section {
             padding: 60px 0 100px;
@@ -470,6 +438,7 @@
             border-radius: 8px;
             font-weight: 500;
             transition: all 0.3s;
+            cursor: pointer;
         }
 
         .contact-btn:hover {
@@ -484,33 +453,14 @@
                 flex-direction: column;
                 text-align: center;
             }
-
-            .hero p {
-                margin: 0 auto 30px;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero-visual {
-                width: 100%;
-                max-width: 350px;
-                margin: 0 auto;
-            }
-
-            .path-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero p { margin: 0 auto 30px; }
+            .hero-buttons { justify-content: center; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero-visual { width: 100%; max-width: 350px; margin: 0 auto; }
+            .path-grid, .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-
 <body>
 
     <div class="container">
@@ -533,23 +483,26 @@
                 <div class="hero-tag">2 курс · СПбГУ · Матмех</div>
                 <h1>Математика.<br>Код. Баскетбол.</h1>
                 <p>
-                    Привет, меня зовут <strong>Ацамаз</strong>, мне <strong>19 лет</strong>.
-                    Учусь на втором курсе <strong>СПбГУ</strong> на факультете <strong>математики и механики</strong>,
-                    направление «Программная инженерия». Пишу на <span class="highlight">Python</span> и <span
-                        class="highlight">C</span>,
-                    а в свободное время выхожу на площадку — баскетбол для меня не просто хобби,
+                    Привет, меня зовут <strong>Ацамаз</strong>, мне <strong>19 лет</strong>. 
+                    Учусь на втором курсе <strong>СПбГУ</strong> на факультете <strong>математики и механики</strong>, 
+                    направление «Программная инженерия». Пишу на <span class="highlight">Python</span> и <span class="highlight">C</span>, 
+                    а в свободное время выхожу на площадку — баскетбол для меня не просто хобби, 
                     а часть жизни. Мой подход прост: <strong>считать, писать, побеждать</strong>.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Смотреть проекты <i class="fas fa-arrow-right"></i></a>
-                    <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-outline"><i
-                            class="fab fa-github"></i> GitHub</a>
+                    <!-- Кнопка "Смотреть проекты" (плавный скролл) -->
+                    <a href="#projects" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'}); return false;" class="btn btn-primary">
+                        Смотреть проекты <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <!-- Кнопка "GitHub" (надежный переход) -->
+                    <a href="https://github.com/atsa111" target="_blank" rel="noopener noreferrer" onclick="window.open('https://github.com/atsa111', '_blank'); return false;" class="btn btn-outline">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </div>
             </div>
             <div class="hero-visual">
-                <!-- ВСТАВЛЯЕМ ФОТО. Убедись, что файл называется photo.jpg и лежит рядом с index.html -->
                 <img src="photo.jpg" alt="Ацамаз Чочиев">
-
                 <div class="math-bg">
                     ∫ f(x)dx<br>
                     ∑ (n=1)∞<br>
@@ -566,26 +519,22 @@
                 <div class="path-card">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Откуда я</h3>
-                    <p>Родился и вырос в Южной Осетии, в городе Цхинвал. Именно там началось моё увлечение точными
-                        науками и спортом.</p>
+                    <p>Родился и вырос в Южной Осетии, в городе Цхинвал. Именно там началось моё увлечение точными науками и спортом.</p>
                 </div>
                 <div class="path-card">
                     <i class="fas fa-university"></i>
                     <h3>Где я сейчас</h3>
-                    <p>Учусь на втором курсе СПбГУ, факультет математики и механики, направление «Программная
-                        инженерия». Мне 19 лет.</p>
+                    <p>Учусь на втором курсе СПбГУ, факультет математики и механики, направление «Программная инженерия». Мне 19 лет.</p>
                 </div>
                 <div class="path-card">
                     <i class="fas fa-square-root-alt"></i>
                     <h3>Что люблю</h3>
-                    <p>Искренне люблю математику за её строгость и красоту. Пишу код на Python и C, изучаю Kotlin для
-                        мобильной разработки.</p>
+                    <p>Искренне люблю математику за её строгость и красоту. Пишу код на Python и C, изучаю Kotlin для мобильной разработки.</p>
                 </div>
                 <div class="path-card">
                     <i class="fas fa-basketball-ball"></i>
                     <h3>Моё хобби</h3>
-                    <p>Баскетбол — моя страсть. Занимался им профессионально. Спорт учит дисциплине, командной работе и
-                        умению быстро принимать решения.</p>
+                    <p>Баскетбол — моя страсть. Занимался им профессионально. Спорт учит дисциплине, командной работе и умению быстро принимать решения.</p>
                 </div>
             </div>
         </section>
@@ -602,24 +551,16 @@
                 </div>
                 <div class="terminal-body">
                     <div><span class="comment"># Языки программирования</span></div>
-                    <div><span class="key">languages</span>: <span class="bracket">[</span><span
-                            class="string">"Python"</span>, <span class="string">"C"</span>, <span
-                            class="string">"Kotlin"</span><span class="bracket">]</span></div>
+                    <div><span class="key">languages</span>: <span class="bracket">[</span><span class="string">"Python"</span>, <span class="string">"C"</span>, <span class="string">"Kotlin"</span><span class="bracket">]</span></div>
                     <br>
                     <div><span class="comment"># Сферы интересов</span></div>
-                    <div><span class="key">interests</span>: <span class="bracket">[</span><span
-                            class="string">"Математика"</span>, <span class="string">"Алгоритмы"</span>, <span
-                            class="string">"Оптимизация компиляторов"</span><span class="bracket">]</span></div>
+                    <div><span class="key">interests</span>: <span class="bracket">[</span><span class="string">"Математика"</span>, <span class="string">"Алгоритмы"</span>, <span class="string">"Оптимизация компиляторов"</span><span class="bracket">]</span></div>
                     <br>
                     <div><span class="comment"># Мобильная разработка</span></div>
-                    <div><span class="key">mobile</span>: <span class="bracket">{</span> <span class="string">"Android
-                            SDK"</span>, <span class="string">"REST API"</span>, <span class="string">"JSON"</span>
-                        <span class="bracket">}</span></div>
+                    <div><span class="key">mobile</span>: <span class="bracket">{</span> <span class="string">"Android SDK"</span>, <span class="string">"REST API"</span>, <span class="string">"JSON"</span> <span class="bracket">}</span></div>
                     <br>
                     <div><span class="comment"># Инструменты</span></div>
-                    <div><span class="key">tools</span>: <span class="bracket">[</span><span
-                            class="string">"Git"</span>, <span class="string">"GCC"</span>, <span
-                            class="string">"Clang"</span><span class="bracket">]</span></div>
+                    <div><span class="key">tools</span>: <span class="bracket">[</span><span class="string">"Git"</span>, <span class="string">"GCC"</span>, <span class="string">"Clang"</span><span class="bracket">]</span></div>
                 </div>
             </div>
         </section>
@@ -628,25 +569,27 @@
         <section class="projects-section" id="projects">
             <h2 class="section-title">Избранные проекты</h2>
             <div class="projects-grid">
-                <!-- Проект 1 -->
+                <!-- Проект 1: Погода -->
                 <div class="project-card">
                     <div class="project-tags">
                         <span class="tag">Kotlin</span>
                         <span class="tag">Android</span>
                     </div>
                     <h3>Погодное приложение</h3>
-                    <p>Мобильное приложение для Android, написанное на Kotlin. Получает актуальные данные о погоде через
-                        API и отображает прогноз в удобном интерфейсе.</p>
+                    <p>Мобильное приложение для Android, написанное на Kotlin. Получает актуальные данные о погоде через API и отображает прогноз в удобном интерфейсе.</p>
                 </div>
-                <!-- Проект 2 -->
+                <!-- Проект 2: Компиляторы -->
                 <div class="project-card">
                     <div class="project-tags">
                         <span class="tag">C</span>
                         <span class="tag">Компиляторы</span>
                     </div>
                     <h3>Анализ оптимизаций</h3>
-                    <p>Учебный проект по исследованию и сравнению эффективности различных оптимизаций компиляторов.
-                        Анализ влияния флагов на производительность.</p>
+                    <p>Учебный проект по исследованию и сравнению эффективности различных оптимизаций компиляторов. Анализ влияния флагов на производительность.</p>
+                    <!-- ССЫЛКА НА РЕПОЗИТОРИЙ С ЗАЩИТОЙ -->
+                    <a href="https://github.com/atsa111/compiler-optimization-study" target="_blank" rel="noopener noreferrer" onclick="window.open('https://github.com/atsa111/compiler-optimization-study', '_blank'); return false;" class="project-card-link">
+                        Посмотреть код <i class="fas fa-arrow-up-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -655,19 +598,28 @@
         <section class="contacts-section" id="contacts">
             <h2 class="section-title">Связаться со мной</h2>
             <div class="contact-links">
-                <a href="https://t.me/amazingatsa" target="_blank" rel="noopener" class="contact-btn">
+                <!-- Telegram -->
+                <a href="https://t.me/amazingatsa" target="_blank" rel="noopener noreferrer" onclick="window.open('https://t.me/amazingatsa', '_blank'); return false;" class="contact-btn">
                     <i class="fab fa-telegram-plane"></i> Telegram
                 </a>
-                <a href="tel:+79298554546" class="contact-btn">
+                
+                <!-- Телефон -->
+                <a href="tel:+79298554546" onclick="window.location.href='tel:+79298554546'; return false;" class="contact-btn">
                     <i class="fas fa-phone"></i> +7 929 855-45-46
                 </a>
-                <a href="mailto:chochiev07@mail.ru" class="contact-btn">
+                
+                <!-- Почта -->
+                <a href="mailto:chochiev07@mail.ru" onclick="window.location.href='mailto:chochiev07@mail.ru'; return false;" class="contact-btn">
                     <i class="fas fa-envelope"></i> Email
                 </a>
-                <a href="https://vk.com/id1068567857" target="_blank" rel="noopener" class="contact-btn">
+                
+                <!-- ВКонтакте -->
+                <a href="https://vk.com/id1068567857" target="_blank" rel="noopener noreferrer" onclick="window.open('https://vk.com/id1068567857', '_blank'); return false;" class="contact-btn">
                     <i class="fab fa-vk"></i> ВКонтакте
                 </a>
-                <a href="https://github.com/" target="_blank" rel="noopener" class="contact-btn">
+                
+                <!-- GitHub -->
+                <a href="https://github.com/atsa111" target="_blank" rel="noopener noreferrer" onclick="window.open('https://github.com/atsa111', '_blank'); return false;" class="contact-btn">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </div>
@@ -675,5 +627,4 @@
     </div>
 
 </body>
-
 </html>
